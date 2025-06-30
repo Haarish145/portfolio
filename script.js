@@ -1,115 +1,131 @@
-// Smooth Scrolling
-document.querySelectorAll('nav ul li a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+document.addEventListener('DOMContentLoaded', () => {
+    // Animate circular progress bars on page load
+    const circles = document.querySelectorAll('.circle');
+    circles.forEach(circle => {
+        const dashArray = circle.getAttribute('stroke-dasharray');
+        circle.style.strokeDasharray = '0, 100';
+        setTimeout(() => {
+            circle.style.strokeDasharray = dashArray;
+        }, 100);
+    });
 
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
+    // Animate progress bars on page load (for backward compatibility)
+    const progressBars = document.querySelectorAll('.progress');
+    progressBars.forEach(bar => {
+        const width = bar.style.width;
+        bar.style.width = '0';
+        setTimeout(() => {
+            bar.style.width = width;
+        }, 100);
+    });
 
-        targetElement.scrollIntoView({
-            behavior: 'smooth'
+    // Add tooltip functionality for progress bars
+    progressBars.forEach(bar => {
+        bar.addEventListener('mouseenter', () => {
+            const tooltip = document.createElement('div');
+            tooltip.className = 'progress-tooltip';
+            tooltip.textContent = bar.parentElement.title || '';
+            document.body.appendChild(tooltip);
+
+            const rect = bar.getBoundingClientRect();
+            tooltip.style.left = `${rect.left + rect.width / 2}px`;
+            tooltip.style.top = `${rect.top - 30}px`;
+            tooltip.style.opacity = '1';
+
+            bar._tooltip = tooltip;
+        });
+
+        bar.addEventListener('mouseleave', () => {
+            if (bar._tooltip) {
+                bar._tooltip.style.opacity = '0';
+                setTimeout(() => {
+                    if (bar._tooltip && bar._tooltip.parentElement) {
+                        bar._tooltip.parentElement.removeChild(bar._tooltip);
+                        bar._tooltip = null;
+                    }
+                }, 300);
+            }
         });
     });
 });
 
-// Contact Form Submission Handler
-document.getElementById('contact-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-
-    if (name && email && message) {
-        // This is where you would normally send the form data to a server
-        // For this example, we will just log the data to the console
-        console.log('Form Submitted');
-        console.log('Name:', name);
-        console.log('Email:', email);
-        console.log('Message:', message);
-
-        // Clear the form
-        document.getElementById('contact-form').reset();
-
-        // Show a success message (you could improve this with better UI)
-        alert('Thank you for your message!');
+// Unified Toggle Function with Slide Animation
+function slideToggle(element, duration = 400) {
+    if (window.getComputedStyle(element).display === 'none') {
+        element.style.removeProperty('display');
+        let display = window.getComputedStyle(element).display;
+        if (display === 'none') display = 'block';
+        element.style.display = display;
+        let height = element.offsetHeight;
+        element.style.overflow = 'hidden';
+        element.style.height = 0;
+        element.style.paddingTop = 0;
+        element.style.paddingBottom = 0;
+        element.style.marginTop = 0;
+        element.style.marginBottom = 0;
+        element.offsetHeight; // force repaint
+        element.style.transitionProperty = "height, margin, padding";
+        element.style.transitionDuration = duration + 'ms';
+        element.style.height = height + 'px';
+        element.style.removeProperty('padding-top');
+        element.style.removeProperty('padding-bottom');
+        element.style.removeProperty('margin-top');
+        element.style.removeProperty('margin-bottom');
+        window.setTimeout(() => {
+            element.style.removeProperty('height');
+            element.style.removeProperty('overflow');
+            element.style.removeProperty('transition-property');
+            element.style.removeProperty('transition-duration');
+        }, duration);
     } else {
-        alert('Please fill in all fields.');
+        element.style.height = element.offsetHeight + 'px';
+        element.offsetHeight; // force repaint
+        element.style.transitionProperty = "height, margin, padding";
+        element.style.transitionDuration = duration + 'ms';
+        element.style.height = 0;
+        element.style.paddingTop = 0;
+        element.style.paddingBottom = 0;
+        element.style.marginTop = 0;
+        element.style.marginBottom = 0;
+        window.setTimeout(() => {
+            element.style.display = 'none';
+            element.style.removeProperty('height');
+            element.style.removeProperty('overflow');
+            element.style.removeProperty('transition-property');
+            element.style.removeProperty('transition-duration');
+            element.style.removeProperty('padding-top');
+            element.style.removeProperty('padding-bottom');
+            element.style.removeProperty('margin-top');
+            element.style.removeProperty('margin-bottom');
+        }, duration);
     }
-});
+}
 
 // Toggle About Me Details
 function toggleAboutMe() {
-    const details = document.getElementById("about-me-details");
-    if (details.style.display === "none") {
-        details.style.display = "block";
-    } else {
-        details.style.display = "none";
-    }
-}
-
-// Toggle Project Details Visibility
-function toggleProjectDetails(projectId) {
-    const details = document.getElementById(projectId);
-    if (details.style.display === "none" || details.style.display === "") {
-        details.style.display = "block";
-    } else {
-        details.style.display = "none";
-    }
-}
-function toggleProjectDetails(projectId) {
-    const details = document.getElementById(projectId);
-    if (details) {
-        details.style.display = details.style.display === "block" ? "none" : "block";
-    } else {
-        console.error(`Element with ID ${projectId} not found.`);
-    }
-}
-function toggleProjectDetails(projectId) {
-    var projectDetails = document.getElementById(projectId);
-    if (projectDetails.style.display === "none") {
-        projectDetails.style.display = "block";
-    } else {
-        projectDetails.style.display = "none";
-    }
-}
-function toggleProjectDetails(projectId) {
-    var projectDetails = document.getElementById(projectId);
-    if (projectDetails.style.display === "none") {
-        projectDetails.style.display = "block";
-    } else {
-        projectDetails.style.display = "none";
-    }
-}
-// Toggle the 'More About Me' details
-function toggleAboutMe() {
     const details = document.getElementById('about-me-details');
-    details.style.display = details.style.display === 'none' ? 'block' : 'none';
+    slideToggle(details, 400);
 }
 
-// Toggle project details
+// Toggle Project Details
 function toggleProjectDetails(projectId) {
-    const project = document.getElementById(projectId);
-    project.style.display = project.style.display === 'none' ? 'block' : 'none';
-}
-function toggleProjectDetails(projectId) {
-    // Get all project details sections
-    const projectDetails = document.querySelectorAll('.project-details');
-    
-    // Hide all project details sections first
-    projectDetails.forEach(project => {
-        if (project.id !== projectId) {
-            project.style.display = 'none';
+    // Close any other open project details
+    const allProjectDetails = document.querySelectorAll('.project-details');
+    allProjectDetails.forEach(detail => {
+        if (detail.id !== projectId) {
+            detail.style.display = 'none';
+            detail.setAttribute('aria-hidden', 'true');
         }
     });
-    
-    // Toggle the visibility of the clicked project section
-    const selectedProject = document.getElementById(projectId);
-    if (selectedProject.style.display === 'none' || selectedProject.style.display === '') {
-        selectedProject.style.display = 'block';
-    } else {
-        selectedProject.style.display = 'none';
+
+    // Toggle the clicked project details
+    const projectDetails = document.getElementById(projectId);
+    if (projectDetails) {
+        const isVisible = projectDetails.style.display === 'block';
+        projectDetails.style.display = isVisible ? 'none' : 'block';
+        projectDetails.setAttribute('aria-hidden', isVisible ? 'true' : 'false');
+        if (!isVisible) {
+            projectDetails.focus();
+        }
     }
 }
-
-
