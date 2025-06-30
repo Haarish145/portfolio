@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#certificates">Certificates</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" tabindex="0">Home</a></li>
+                <li><a href="#about" tabindex="0">About Me</a></li>
+                <li><a href="#projects" tabindex="0">Projects</a></li>
+                <li><a href="#certificates" tabindex="0">Certificates</a></li>
+                <li><a href="#contact" tabindex="0">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -25,37 +25,189 @@
             <h2 class="typing">MOHAMED HAARISH</h2>
             <h3 class="zoom-in">And I'm a Full-Stack Developer</h3>
 
-            <img src="img1.jpg" alt="Mohamed Haarish" class="profile-pic">
+            <img src="img1.jpg" alt="Mohamed Haarish" class="profile-pic" tabindex="0" />
         </div>
     </section>
     <section id="about" class="section">
         <div class="container">
             <h2>ABOUT ME 🙋‍♂️</h2>
-            <p>Aspiring Full-Stack Developer with a strong foundation in front-end and back-end technologies. Proficient in web development, UI/UX design, and database management, with experience in building interactive and scalable web applications. Passionate about developing efficient, user-friendly solutions and continuously improving technical skills.</p>
-            <button class="about-me-btn" onclick="toggleAboutMe()">More About Me </button>
-        
+            <p>
+                Aspiring Full-Stack Developer with a strong foundation in front-end and back-end
+                technologies. Proficient in web development, UI/UX design, and database management,
+                with experience in building interactive and scalable web applications. Passionate
+                about developing efficient, user-friendly solutions and continuously improving
+                technical skills.
+            </p>
+            <button class="about-me-btn" onclick="toggleAboutMe()" aria-expanded="false" aria-controls="about-me-details">
+                More About Me
+            </button>
+
             <!-- Hidden section with more details -->
-            <div id="about-me-details" class="about-me-details" style="display: none;">
+            <div
+                id="about-me-details"
+                class="about-me-details"
+                style="display: none"
+                aria-hidden="true"
+                tabindex="-1"
+            >
                 <h3>⦿ EDUCATION:</h3>
-                <p>10th Schooling In St.Antony’s Matriculation School, Thuvarankurichi,Tamilnadu <h5>2018-2019</h5></p>
-                <p>Junior College In Lakshmi Matric Higher Secondary School, Manapparai,Tamilnadu <h5>2020-2021</h5></p>
-                <p>Persuing Bachelor Of Engineering in M.Kumarasamy College Of Engineering, Thalavapalayam, Karur <h5>2022-2026</h5></p>
+                <p>
+                    10th Schooling In St.Antony’s Matriculation School, Thuvarankurichi,Tamilnadu
+                    <h5>2018-2019</h5>
+                </p>
+                <p>
+                    Junior College In Lakshmi Matric Higher Secondary School, Manapparai,Tamilnadu
+                    <h5>2020-2021</h5>
+                </p>
+                <p>
+                    Persuing Bachelor Of Engineering in M.Kumarasamy College Of Engineering,
+                    Thalavapalayam, Karur <h5>2022-2026</h5>
+                </p>
                 <h3>⦿ OUTSIDE PARTICIPATION:</h3>
-                <p>Participated in the Coding Contest event in “Aventuro 2k23” at Kongu Engineering College, Perundurai, Erode <h5>April-2023</h5></p>
-                <a href="https://drive.google.com/file/d/1b9M3qVOZyVABvYTiuU75aht8zaqu14fa/view?usp=sharing" target="_blank" style="color: #007BFF;text-decoration: none;">Click to view certification</a>
-                <p>Completed a 1-month Internship in Web Development with outstanding remarks at Prodigy InfoTech <h5>August-2024</h5></p>
-                <a href="https://drive.google.com/file/d/1Wlsnevdtdco_z8kcAW1Vmz7PffAUa0ZN/view?usp=sharing" target="_blank" style="color: #007BFF; text-decoration: none;">Click to view certification</a>
-                <br><a href="https://drive.google.com/file/d/1lrZKpRv2i6jR4gl43GKEdDjMx23qmHR-/view?usp=sharing" target="_blank" style="color: #007BFF; text-decoration: none;">Click to view certification</a>
-                <p>Completed a 3-hour Boot Camp in Artificial Intelligence conducted by NoviTech R&D Private Limited <h5>September-2024</h5></p>
-                <a href="https://drive.google.com/file/d/1pyZ3msboITCzyre_sbd0dBTm2PglKgGq/view?usp=sharing" target="_blank" style="color: #007BFF; text-decoration: none;">Click to view certification</a>
-                <p>Participated in the Logo Design event in “AIROX 2k24” at J.J College Of Engineering And Technology, Trichy <h5>November-2024</h5></p>
-                <a href="https://drive.google.com/file/d/1R_9GWb3rHp3L699LwoO8asP-mKRrZWVp/view?usp=drivesdk" target="_blank" style="color: #007BFF; text-decoration: none;">Click to view certification</a>
+                <p>
+                    Participated in the Coding Contest event in “Aventuro 2k23” at Kongu Engineering
+                    College, Perundurai, Erode <h5>April-2023</h5>
+                </p>
+                <a
+                    href="https://drive.google.com/file/d/1b9M3qVOZyVABvYTiuU75aht8zaqu14fa/view?usp=sharing"
+                    target="_blank"
+                    style="color: #ed8908; text-decoration: none"
+                    >Click to view certification</a
+                >
+                <p>
+                    Completed a 1-month Internship in Web Development with outstanding remarks at
+                    Prodigy InfoTech <h5>August-2024</h5>
+                </p>
+                <a
+                    href="https://drive.google.com/file/d/1Wlsnevdtdco_z8kcAW1Vmz7PffAUa0ZN/view?usp=sharing"
+                    target="_blank"
+                    style="color: #eb8a13; text-decoration: none"
+                    >Click to view certification</a
+                >
+                <br />
+                <a
+                    href="https://drive.google.com/file/d/1lrZKpRv2i6jR4gl43GKEdDjMx23qmHR-/view?usp=sharing"
+                    target="_blank"
+                    style="color: #da6b11; text-decoration: none"
+                    >Click to view certification</a
+                >
+                <p>
+                    Completed a 3-hour Boot Camp in Artificial Intelligence conducted by NoviTech R&D
+                    Private Limited <h5>September-2024</h5>
+                </p>
+                <a
+                    href="https://drive.google.com/file/d/1pyZ3msboITCzyre_sbd0dBTm2PglKgGq/view?usp=sharing"
+                    target="_blank"
+                    style="color: #df6a11; text-decoration: none"
+                    >Click to view certification</a
+                >
+                <p>
+                    Participated in the Logo Design event in “AIROX 2k24” at J.J College Of
+                    Engineering And Technology, Trichy <h5>November-2024</h5>
+                </p>
+                <a
+                    href="https://drive.google.com/file/d/1R_9GWb3rHp3L699LwoO8asP-mKRrZWVp/view?usp=drivesdk"
+                    target="_blank"
+                    style="color: #ea8f10; text-decoration: none"
+                    >Click to view certification</a
+                >
                 <h3>⦿ TECHNICAL SKILLS:</h3>
-                <p> C (intermediate)<br> C++ (beginner)<br> Java (intermediate)<br> Python (intermediate)</p>
-                <h3>⦿ SOFT SKILLS:</h3>
-                <p> Team management<br> Multitasking<br> Decision making</p>
-                <h3>⦿ LANGUAGES KNOWN:</h3>
-                <p>Tamil (Read,Speak,Write)</p><p> English ( Read,Speak,Write)</p>
+<div class="skills-chart circular-chart-container">
+    <div class="circular-skill" tabindex="0" aria-label="Skill C, Intermediate, 70 percent">
+        <svg class="circular-chart intermediate" viewBox="0 0 36 36">
+            <path class="circle-bg"
+                d="M18 2.0845
+                   a 15.9155 15.9155 0 0 1 0 31.831
+                   a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <path class="circle"
+                stroke-dasharray="70, 100"
+                d="M18 2.0845
+                   a 15.9155 15.9155 0 0 1 0 31.831
+                   a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <text x="18" y="20.35" class="percentage">70%</text>
+        </svg>
+        <div class="skill-info">
+            <span class="skill-name">C</span>
+            <span class="skill-level">Intermediate</span>
+        </div>
+    </div>
+    <div class="circular-skill" tabindex="0" aria-label="Skill C++, Beginner, 40 percent">
+        <svg class="circular-chart beginner" viewBox="0 0 36 36">
+            <path class="circle-bg"
+                d="M18 2.0845
+                   a 15.9155 15.9155 0 0 1 0 31.831
+                   a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <path class="circle"
+                stroke-dasharray="40, 100"
+                d="M18 2.0845
+                   a 15.9155 15.9155 0 0 1 0 31.831
+                   a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <text x="18" y="20.35" class="percentage">40%</text>
+        </svg>
+        <div class="skill-info">
+            <span class="skill-name">C++</span>
+            <span class="skill-level">Beginner</span>
+        </div>
+    </div>
+    <div class="circular-skill" tabindex="0" aria-label="Skill Java, Intermediate, 70 percent">
+        <svg class="circular-chart intermediate" viewBox="0 0 36 36">
+            <path class="circle-bg"
+                d="M18 2.0845
+                   a 15.9155 15.9155 0 0 1 0 31.831
+                   a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <path class="circle"
+                stroke-dasharray="70, 100"
+                d="M18 2.0845
+                   a 15.9155 15.9155 0 0 1 0 31.831
+                   a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <text x="18" y="20.35" class="percentage">70%</text>
+        </svg>
+        <div class="skill-info">
+            <span class="skill-name">Java</span>
+            <span class="skill-level">Intermediate</span>
+        </div>
+    </div>
+    <div class="circular-skill" tabindex="0" aria-label="Skill Python, Intermediate, 70 percent">
+        <svg class="circular-chart intermediate" viewBox="0 0 36 36">
+            <path class="circle-bg"
+                d="M18 2.0845
+                   a 15.9155 15.9155 0 0 1 0 31.831
+                   a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <path class="circle"
+                stroke-dasharray="70, 100"
+                d="M18 2.0845
+                   a 15.9155 15.9155 0 0 1 0 31.831
+                   a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <text x="18" y="20.35" class="percentage">70%</text>
+        </svg>
+        <div class="skill-info">
+            <span class="skill-name">Python</span>
+            <span class="skill-level">Intermediate</span>
+        </div>
+    </div>
+                <div class="skills-languages-container">
+                    <div class="soft-skills">
+                        <h3>⦿ SOFT SKILLS:</h3>
+                        <ul>
+                            <li>Team management</li>
+                            <li>Multitasking</li>
+                            <li>Decision making</li>
+                        </ul>
+                    </div>
+                    <div class="languages-known">
+                        <h3>⦿ LANGUAGES KNOWN:</h3>
+                        <li>Tamil (Read, Speak, Write)</li>
+                        <li>English(Read, Speak, Write)</li>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -63,26 +215,68 @@
         <div class="container">
             <h2>PROJECTS I HAVE DONE 📊📈</h2>
             <div class="project">
-                <button class="project-btn" onclick="toggleProjectDetails('air-quality')">Air Quality Monitoring System</button>
-                <button class="project-btn" onclick="toggleProjectDetails('responsive-landing')">Responsive Landing Page</button>
-                <button class="project-btn" onclick="toggleProjectDetails('Stopwatch-Web')">Stopwatch Web Application</button>
-                <button class="project-btn" onclick="toggleProjectDetails('tic-tac-toe')">Tic-Tac-Toe Web Application</button>
-                <button class="project-btn" onclick="toggleProjectDetails('weather-app')">Weather Application</button>
-                <button class="project-btn" onclick="toggleProjectDetails('intruder-detection')">Intruder Detection and Email Alerting System</button>
-            <strong>Click the project for more information</strong>
+                <button
+                    class="project-btn"
+                    onclick="toggleProjectDetails('air-quality')"
+                    aria-expanded="false"
+                    aria-controls="air-quality"
+                >
+                    Air Quality Monitoring System
+                </button>
+                <button
+                    class="project-btn"
+                    onclick="toggleProjectDetails('responsive-landing')"
+                    aria-expanded="false"
+                    aria-controls="responsive-landing"
+                >
+                    Responsive Landing Page
+                </button>
+                <button
+                    class="project-btn"
+                    onclick="toggleProjectDetails('Stopwatch-Web')"
+                    aria-expanded="false"
+                    aria-controls="Stopwatch-Web"
+                >
+                    Stopwatch Web Application
+                </button>
+                <button
+                    class="project-btn"
+                    onclick="toggleProjectDetails('tic-tac-toe')"
+                    aria-expanded="false"
+                    aria-controls="tic-tac-toe"
+                >
+                    Tic-Tac-Toe Web Application
+                </button>
+                <button
+                    class="project-btn"
+                    onclick="toggleProjectDetails('weather-app')"
+                    aria-expanded="false"
+                    aria-controls="weather-app"
+                >
+                    Weather Application
+                </button>
+                <button
+                    class="project-btn"
+                    onclick="toggleProjectDetails('intruder-detection')"
+                    aria-expanded="false"
+                    aria-controls="intruder-detection"
+                >
+                    Intruder Detection and Email Alerting System
+                </button>
+                <strong>Click the project for more information</strong>
             </div>
                 
             <!-- Air Quality Monitoring System Details -->
-            <div id="air-quality" class="project-details" style="display: none;">
+            <div id="air-quality" class="project-details" style="display: none;" aria-hidden="true" tabindex="-1">
                 <h3>Air Quality Monitoring System</h3>
                 <p>It is an IOT based project,In this project i played a role of Testing.</p>
                 <h4>Project Overview</h4>
                 <p>An Air Quality Monitoring System project tracks and displays real-time air quality data, such as levels of pollutants like CO2, PM2.5, and NO2. It uses sensors to collect data and may include a web or mobile interface for users to view the information. The system can send alerts when air quality is poor and may store historical data for analysis. Technologies like IoT, databases, and cloud services are often used to gather, process, and present the data.</p>
-                <img src="11.jpg" alt="Air Quality Monitoring System" class="project-image">
+                <img src="11.jpg" alt="Air Quality Monitoring System" class="project-image" tabindex="0">
                 <p>Figure Of Implemented Air Quality Monitoring System</p>
-                <img src="12.jpg" alt="Air Quality Monitoring System" class="project-image">
+                <img src="12.jpg" alt="Air Quality Monitoring System" class="project-image" tabindex="0">
                 <p>Figure Of Analyzing Air Quality</p>
-                <img src="13.jpg" alt="Air Quality Monitoring System" class="project-image">
+                <img src="13.jpg" alt="Air Quality Monitoring System" class="project-image" tabindex="0">
                 <p>Screenshot Of Thingspeak-Output Page</p>
                 <h4>Objectives</h4>
                 <ul>
@@ -94,26 +288,26 @@
             </div>
     
             <!-- Responsive Landing Page Details -->
-            <div id="responsive-landing" class="project-details" style="display: none;">
+            <div id="responsive-landing" class="project-details" style="display: none;" aria-hidden="true" tabindex="-1">
                 <h3>Responsive Landing Page</h3>
                 <h4>Project Overview</h4>
                 <p>The <strong>Responsive Landing Page</strong> project focuses on designing a visually appealing and user-friendly webpage that adapts seamlessly to different screen sizes and devices.The page is designed using <strong>HTML</strong>, <strong>CSS</strong> (with media queries), and <strong>JavaScript</strong>, ensuring it looks good and functions well on desktops, tablets, and mobile devices.</p>
                 
                 <!-- Add project images here -->
                 <h4>Project Images</h4>
-                <img src="111.png" alt="Responsive Landing Page Design 1" class="project-image">
+                <img src="111.png" alt="Responsive Landing Page Design 1" class="project-image" tabindex="0">
     
-                <img src="112.png" alt="Responsive Landing Page Design 2" class="project-image">
-                <img src="113.png" alt="Responsive Landing Page Design 3" class="project-image">
+                <img src="112.png" alt="Responsive Landing Page Design 2" class="project-image" tabindex="0">
+                <img src="113.png" alt="Responsive Landing Page Design 3" class="project-image" tabindex="0">
             </div>
             <!-- Hidden section for Stopwatch Web Application details -->
-<div id="Stopwatch-Web" class="project-details" style="display: none;">
+<div id="Stopwatch-Web" class="project-details" style="display: none;" aria-hidden="true" tabindex="-1">
     <h3>Stopwatch Web Application</h3>
     <h4>Project Overview</h4>
     <p>A <strong>Stopwatch Web Application</strong> tracks time with features like start, stop, pause, resume, and reset. Built with <strong>HTML</strong>, <strong>CSS</strong> (with media queries), and <strong>JavaScript</strong>, it uses setInterval for real-time updates and offers a simple, user-friendly interface. Potential enhancements include lap tracking, improved styling, and responsiveness.</p>
     <h4>Project Images</h4>
-    <img src="101.png" alt="Stopwatch Web Application Design 1" class="project-image">
-    <img src="102.png" alt="Stopwatch Web Application Design 2" class="project-image">
+    <img src="101.png" alt="Stopwatch Web Application Design 1" class="project-image" tabindex="0">
+    <img src="102.png" alt="Stopwatch Web Application Design 2" class="project-image" tabindex="0">
     <h4>Key Features</h4>
     <ul>
         <li>Start, stop, pause, and reset functionality.</li>
@@ -122,141 +316,199 @@
         <li>Intuitive and user-friendly interface.</li>
     </ul>
 </div>
-<div id="tic-tac-toe" class="project-details" style="display: none;">
+<div id="tic-tac-toe" class="project-details" style="display: none;" aria-hidden="true" tabindex="-1">
     <h3>Tic-Tac-Toe Web Application</h3>
     <h4>Project Overview</h4>
     <p>A simple yet interactive <strong>Tic-Tac-Toe</strong> game built using <strong>HTML</strong>, <strong>CSS</strong> (with media queries), and <strong>JavaScript</strong>. It allows two players to take turns marking X and O on a 3x3 grid. The game detects when a player wins or if there's a draw. The app features a reset option to start a new game. This project showcases basic game logic and interactive UI elements, perfect for learning front-end development.</p>
     
     <h4>Project Images</h4>
-    <img src="01.png" alt="Tic-Tac-Toe Web Application Design 1" class="project-image">
-    <img src="00.png" alt="Tic-Tac-Toe Web Application Design 2" class="project-image">
+    <img src="01.png" alt="Tic-Tac-Toe Web Application Design 1" class="project-image" tabindex="0">
+    <img src="00.png" alt="Tic-Tac-Toe Web Application Design 2" class="project-image" tabindex="0">
 </div> 
-<div id="weather-app" class="project-details" style="display: none;">
+<div id="weather-app" class="project-details" style="display: none;" aria-hidden="true" tabindex="-1">
     <h3>Weather Application</h3>
     <h4>Project Overview</h4>
     <p>The <strong>Weather Application</strong> is a tool that allows users to check current weather conditions for a specific location. It fetches real-time data from a weather API and displays key details such as temperature, humidity, wind speed, and weather descriptions. Built using <strong>HTML</strong>, <strong>CSS</strong> (with media queries), and <strong>JavaScript</strong>, the app provides an interactive and user-friendly interface. The application can handle multiple locations and includes error handling for invalid inputs or connection issues, providing users with a seamless experience.</p>
     
     <h4>Project Images</h4>
-    <img src="000.png" alt="Weather Application Design 1" class="project-image">
-    <img src="001.png" alt="Weather Application Design 2" class="project-image">
+    <img src="000.png" alt="Weather Application Design 1" class="project-image" tabindex="0">
+    <img src="001.png" alt="Weather Application Design 2" class="project-image" tabindex="0">
 </div>
-<div id="intruder-detection" class="project-details" style="display: none;">
+<div id="intruder-detection" class="project-details" style="display: none;" aria-hidden="true" tabindex="-1">
     <h3>Intruder Detection and Email Alerting System</h3>
     <h2>Coming Soon....</h2>
 </div>
-<section id="certificates" class="section"  padding: 40px 0;>
-    <div class="container">
+<section id="certificates" class="section" style="padding: 40px 0;">
+    <div class="container" style="background-color: #7ed6a1; padding: 30px 20px; border-radius: 15px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); margin-top: 20px;">
         <h2>CERTIFICATES I HAVE GOT 📃🏅</h2>
         <!-- You can add the list of certificates here -->
-        <ul style="list-style-type: none; padding: 0; font-family: Arial, sans-serif;">
-            <li style="margin: 15px 0; padding: 10px; background-color: #939ad7; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <ul class="certificates-grid" style="padding: 0; list-style: none; margin-top: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+            <li class="certificate-card" style="background-color: #7f8fa6; color: #000; padding: 20px 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
                 <strong>Oracle Cloud Infrastructure 2024 Data Certified Foundations Associate:</strong>
-                <a href="https://drive.google.com/file/d/1Rn0WFKix-iWVvSIZ003ie5QwTH5pcKay/view?usp=sharing" target="_blank" style="color: #007BFF; text-decoration: none;">Click to view certification</a>
+                <a href="https://drive.google.com/file/d/1Rn0WFKix-iWVvSIZ003ie5QwTH5pcKay/view?usp=sharing" target="_blank" style="color: #d4d410; text-decoration: underline; font-weight: 600; transition: color 0.3s ease;">Click to view certification</a>
             </li>
-            <li style="margin: 15px 0; padding: 10px; background-color: #8894d2; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <li class="certificate-card" style="background-color: #7f8fa6; color: #000; padding: 20px 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
                 <strong>Azure: create a REST API using NodeJS Serverless Functions-Coursera:</strong>
-                <a href="https://drive.google.com/file/d/13FTMhyecz91PH57e9JRHsrXlO7kaUHFi/view?usp=sharing" target="_blank" style="color: #007BFF; text-decoration: none;">Click to view certification</a>
+                <a href="https://drive.google.com/file/d/13FTMhyecz91PH57e9JRHsrXlO7kaUHFi/view?usp=sharing" target="_blank" style="color: #cbd117; text-decoration: underline; font-weight: 600; transition: color 0.3s ease;">Click to view certification</a>
             </li>
-            <li style="margin: 15px 0; padding: 10px; background-color: #8d94d7; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <li class="certificate-card" style="background-color: #7f8fa6; color: #000; padding: 20px 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
                 <strong>PRODIGY - Internship:</strong>
-                <a href="https://drive.google.com/file/d/1Wlsnevdtdco_z8kcAW1Vmz7PffAUa0ZN/view?usp=sharing" target="_blank" style="color: #007BFF; text-decoration: none;">Click to view certification</a>
+                <a href="https://drive.google.com/file/d/1Wlsnevdtdco_z8kcAW1Vmz7PffAUa0ZN/view?usp=sharing" target="_blank" style="color: #dcdc0c; text-decoration: underline; font-weight: 600; transition: color 0.3s ease;">Click to view certification</a>
             </li>
-            <li style="margin: 15px 0; padding: 10px; background-color: #9292d2; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <li class="certificate-card" style="background-color: #7f8fa6; color: #000; padding: 20px 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
                 <strong>Letter of Recommendation - PRODIGY:</strong>
-                <a href="https://drive.google.com/file/d/1lrZKpRv2i6jR4gl43GKEdDjMx23qmHR-/view?usp=sharing" target="_blank" style="color: #007BFF; text-decoration: none;">Click to view certification</a>
+                <a href="https://drive.google.com/file/d/1lrZKpRv2i6jR4gl43GKEdDjMx23qmHR-/view?usp=sharing" target="_blank" style="color: #c8ce0a; text-decoration: underline; font-weight: 600; transition: color 0.3s ease;">Click to view certification</a>
             </li>
-            <li style="margin: 15px 0; padding: 10px; background-color: #9090c3; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <li class="certificate-card" style="background-color: #7f8fa6; color: #000; padding: 20px 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
                 <strong>NOVITECH - 3 Hrs Boot Camp in Artificial Intelligence:</strong>
-                <a href="https://drive.google.com/file/d/1pyZ3msboITCzyre_sbd0dBTm2PglKgGq/view?usp=sharing" target="_blank" style="color: #007BFF; text-decoration: none;">Click to view certification</a>
+                <a href="https://drive.google.com/file/d/1pyZ3msboITCzyre_sbd0dBTm2PglKgGq/view?usp=sharing" target="_blank" style="color: #cec218; text-decoration: underline; font-weight: 600; transition: color 0.3s ease;">Click to view certification</a>
             </li>
-            <li style="margin: 15px 0; padding: 10px; background-color: #8896c1; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <li class="certificate-card" style="background-color: #7f8fa6; color: #000; padding: 20px 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
                 <strong>RBI QUIZZ:</strong>
-                <a href="https://drive.google.com/file/d/1P4_o9wAzbJp4IzdkcfXSPyc6IBo0L5-N/view?usp=sharing" target="_blank" style="color: #007BFF; text-decoration: none;">Click to view certification</a>
+                <a href="https://drive.google.com/file/d/1P4_o9wAzbJp4IzdkcfXSPyc6IBo0L5-N/view?usp=sharing" target="_blank" style="color: #c9c920; text-decoration: underline; font-weight: 600; transition: color 0.3s ease;">Click to view certification</a>
             </li>
-            <li style="margin: 15px 0; padding: 10px; background-color: #8c8ebe; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <li class="certificate-card" style="background-color: #7f8fa6; color: #000; padding: 20px 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
                 <strong>AWS S3 Basics - Coursera:</strong>
-                <a href="https://drive.google.com/file/d/1TseuS8hgjzRUgre3AvSzjp6M388Wzuvg/view?usp=sharing" target="_blank" style="color: #007BFF; text-decoration: none;">Click to view certification</a>
+                <a href="https://drive.google.com/file/d/1TseuS8hgjzRUgre3AvSzjp6M388Wzuvg/view?usp=sharing" target="_blank" style="color: #b3be19; text-decoration: underline; font-weight: 600; transition: color 0.3s ease;">Click to view certification</a>
             </li>
-            <li style="margin: 15px 0; padding: 10px; background-color: #9283be; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <li class="certificate-card" style="background-color: #7f8fa6; color: #000; padding: 20px 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
                 <strong>Search Engine Optimization (SEO) with Squarespace - Coursera:</strong>
-                <a href="https://drive.google.com/file/d/1MROoAQlepgQ1UbDfdMhcTPkhXeY_5zkV/view?usp=sharing" target="_blank" style="color: #007BFF; text-decoration: none;">Click to view certification</a>
+                <a href="https://drive.google.com/file/d/1MROoAQlepgQ1UbDfdMhcTPkhXeY_5zkV/view?usp=sharing" target="_blank" style="color: #ccd215; text-decoration: underline; font-weight: 600; transition: color 0.3s ease;">Click to view certification</a>
             </li>
-            <li style="margin: 15px 0; padding: 10px; background-color: #9793bb; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <li class="certificate-card" style="background-color: #7f8fa6; color: #000; padding: 20px 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
                 <strong>Introduction to Microsoft Excel - Coursera:</strong>
-                <a href="https://drive.google.com/file/d/1qyMFsP6dsnqvqNRkX2KPHuNfDIAB37MM/view?usp=sharing" target="_blank" style="color: #007BFF; text-decoration: none;">Click to view certification</a>
+                <a href="https://drive.google.com/file/d/1qyMFsP6dsnqvqNRkX2KPHuNfDIAB37MM/view?usp=sharing" target="_blank" style="color: #c8b223; text-decoration: underline; font-weight: 600; transition: color 0.3s ease;">Click to view certification</a>
             </li>
-            <li style="margin: 15px 0; padding: 10px; background-color: #7f7cb2; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <li class="certificate-card" style="background-color: #7f8fa6; color: #000; padding: 20px 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
                 <strong>QUIZZ On 10yrs Of MANN KI BAAT - MyGov:</strong>
-                <a href="https://drive.google.com/file/d/1FTvKkenNVpW5b8B0JL9TlZXHRSRSpeZ9/view?usp=sharing" target="_blank" style="color: #007BFF; text-decoration: none;">Click to view certification</a>
+                <a href="https://drive.google.com/file/d/1FTvKkenNVpW5b8B0JL9TlZXHRSRSpeZ9/view?usp=sharing" target="_blank" style="color: #c1ae1f; text-decoration: underline; font-weight: 600; transition: color 0.3s ease;">Click to view certification</a>
             </li>
-            <li style="margin: 15px 0; padding: 10px; background-color: #8d84b8; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <li class="certificate-card" style="background-color: #7f8fa6; color: #000; padding: 20px 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
                 <strong>Artificial Intelligence Fundamentals - Great Learning:</strong>
-                <a href="https://drive.google.com/file/d/1m-DnAWrJBGW2vcLMJvKzW_82MVzc8J1X/view?usp=sharing" target="_blank" style="color: #007BFF; text-decoration: none;">Click to view certification</a>
+                <a href="https://drive.google.com/file/d/1m-DnAWrJBGW2vcLMJvKzW_82MVzc8J1X/view?usp=sharing" target="_blank" style="color: #cfc01c; text-decoration: underline; font-weight: 600; transition: color 0.3s ease;">Click to view certification</a>
             </li>
-            <li style="margin: 15px 0; padding: 10px; background-color: #8c88b9; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <li class="certificate-card" style="background-color: #7f8fa6; color: #000; padding: 20px 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
                 <strong>Developing Android Apps with App Inventor - The Hong Kong University of Science and Technology (Coursera):</strong>
-                <a href="https://drive.google.com/file/d/16zBJvupBmhK9Eazw79zjgbrZFzXx9tVx/view?usp=sharing" target="_blank" style="color: #007BFF; text-decoration: none;">Click to view certification</a>
+                <a href="https://drive.google.com/file/d/16zBJvupBmhK9Eazw79zjgbrZFzXx9tVx/view?usp=sharing" target="_blank" style="color: #b9a629; text-decoration: underline; font-weight: 600; transition: color 0.3s ease;">Click to view certification</a>
             </li>
-            <li style="margin: 15px 0; padding: 10px; background-color: #7279aa; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <li class="certificate-card" style="background-color: #7f8fa6; color: #000; padding: 20px 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
                 <strong>Organizational Analysis - Stanford University (Coursera):</strong>
-                <a href="https://drive.google.com/file/d/1iBYEGHmZtXwIo7ys3mqlc0b_Jat34OpE/view?usp=sharing" target="_blank" style="color: #007BFF; text-decoration: none;">Click to view certification</a>
+                <a href="https://drive.google.com/file/d/1iBYEGHmZtXwIo7ys3mqlc0b_Jat34OpE/view?usp=sharing" target="_blank" style="color: #b9b929; text-decoration: underline; font-weight: 600; transition: color 0.3s ease;">Click to view certification</a>
             </li>
-            <li style="margin: 15px 0; padding: 10px; background-color: #9682ba; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <li class="certificate-card" style="background-color: #7f8fa6; color: #000; padding: 20px 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
                 <strong>STEP Plus Test Certificate:</strong>
-                <a href="https://drive.google.com/file/d/1ym8rrT9w9AW0Ag8xBqUC7fGLcaLZJ8rS/view?usp=sharing" target="_blank" style="color: #007BFF; text-decoration: none;">Click to view certification</a>
+                <a href="https://drive.google.com/file/d/1ym8rrT9w9AW0Ag8xBqUC7fGLcaLZJ8rS/view?usp=sharing" target="_blank" style="color: #b9b229; text-decoration: underline; font-weight: 600; transition: color 0.3s ease;">Click to view certification</a>
             </li>
-            <li style="margin: 15px 0; padding: 10px; background-color: #8d94d7; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <li class="certificate-card" style="background-color: #7f8fa6; color: #000; padding: 20px 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
                 <strong>Naukri Campus Young Turks:</strong>
-                <a href="https://drive.google.com/file/d/1S3X-MfVskIlL2rY6c-aUVr1hgYLjXDJi/view?usp=drivesdk" target="_blank" style="color: #007BFF; text-decoration: none;">Click to view certification</a>
+                <a href="https://drive.google.com/file/d/1S3X-MfVskIlL2rY6c-aUVr1hgYLjXDJi/view?usp=drivesdk" target="_blank" style="color: #b9b229; text-decoration: underline; font-weight: 600; transition: color 0.3s ease;">Click to view certification</a>
             </li>
-             <li style="margin: 15px 0; padding: 10px; background-color: #8d94d7; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-    <strong>AWS CLOUD PRACTITIONER CLF-C02:</strong><br>
-    <strong>VALIDATION NUMBER:fa4529fcef3b4e39b8b9413e9635236c</strong><br>
-    <strong>VALIDATE AT:</strong>
-    <a href="https://aws.amazon.com/verification" target="_blank" style="color: #007BFF; text-decoration: none;">AWS Verification Page</a><br>
-    <strong>VIEW CERTIFICATE:</strong>
-    <a href="https://drive.google.com/file/d/12SqSFqazA-j42_WKSVC_exyOJF3ZQceE/view?usp=sharing" target="_blank" style="color: #007BFF; text-decoration: none;">Click to view certification</a>
-    <strong>GitHub:</strong>
-    <a href="https://github.com/Haarish145/AWS_HANDS_ON" target="_blank" style="color: #007BFF; text-decoration: none;">GitHub Repository Page</a><br>
-</li>
+            <li class="certificate-card" style="background-color: #7f8fa6; color: #000; padding: 20px 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                <strong>AWS CLOUD PRACTITIONER CLF-C02:</strong><br />
+                <strong>VALIDATION NUMBER:fa4529fcef3b4e39b8b9413e9635236c</strong><br />
+                <strong>VALIDATE AT:</strong>
+                <a href="https://aws.amazon.com/verification" target="_blank" style="color: #e7c30c; text-decoration: underline; font-weight: 600; transition: color 0.3s ease;">AWS Verification Page</a><br />
+                <strong>VIEW CERTIFICATE:</strong>
+                <a href="https://drive.google.com/file/d/12SqSFqazA-j42_WKSVC_exyOJF3ZQceE/view?usp=sharing" target="_blank" style="color: #eccb10; text-decoration: underline; font-weight: 600; transition: color 0.3s ease;">Click to view certification</a><br />
+                <strong>GitHub:</strong>
+                <a href="https://github.com/Haarish145/AWS_HANDS_ON" target="_blank" style="color: #eed024; text-decoration: underline; font-weight: 600; transition: color 0.3s ease;">GitHub Repository Page</a><br />
+            </li>
         </ul>
     </div>
 </section>
-
-
+        
     <section id="contact" class="section">
         <div class="container">
             <h2>Contact</h2>
-    
-            <p style="display: flex; gap: 15px; justify-content: center; align-items: center;">
-                <a href="tel:8148475976" target="_blank" title="Call" rel="noopener noreferrer" style="text-decoration: none;">
-                  <i class="fas fa-phone-alt" style="font-size: 30px; color: #4CAF50; transition: transform 0.3s, color 0.3s;"></i>
+
+            <p
+                style="
+                    display: flex;
+                    gap: 15px;
+                    justify-content: center;
+                    align-items: center;
+                "
+            >
+                <a
+                    href="tel:8148475976"
+                    target="_blank"
+                    title="Call"
+                    rel="noopener noreferrer"
+                    style="text-decoration: none"
+                    tabindex="0"
+                >
+                    <i
+                        class="fas fa-phone-alt"
+                        style="font-size: 30px; color: #4caf50; transition: transform 0.3s, color 0.3s"
+                    ></i>
                 </a>
-                <a href="mailto:haarishk2646@gmail.com" target="_blank" title="Email" rel="noopener noreferrer" style="text-decoration: none;">
-                  <i class="fas fa-envelope" style="font-size: 30px; color: #E91E63; transition: transform 0.3s, color 0.3s;"></i>
+                <a
+                    href="mailto:haarishk2646@gmail.com"
+                    target="_blank"
+                    title="Email"
+                    rel="noopener noreferrer"
+                    style="text-decoration: none"
+                    tabindex="0"
+                >
+                    <i
+                        class="fas fa-envelope"
+                        style="font-size: 30px; color: #e91e63; transition: transform 0.3s, color 0.3s"
+                    ></i>
                 </a>
-                <a href="https://www.linkedin.com/in/haarish-k-4b848125a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" title="LinkedIn" rel="noopener noreferrer" style="text-decoration: none;">
-                  <i class="fab fa-linkedin" style="font-size: 30px; color: #0077B5; transition: transform 0.3s, color 0.3s;"></i>
+                <a
+                    href="https://www.linkedin.com/in/haarish-k-4b848125a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    target="_blank"
+                    title="LinkedIn"
+                    rel="noopener noreferrer"
+                    style="text-decoration: none"
+                    tabindex="0"
+                >
+                    <i
+                        class="fab fa-linkedin"
+                        style="font-size: 30px; color: #0077b5; transition: transform 0.3s, color 0.3s"
+                    ></i>
                 </a>
-                <a href="https://www.instagram.com/_h_a_a_r_i_s_h_145?igsh=OHVuMjJxenloaW1o" target="_blank" title="Instagram" rel="noopener noreferrer" style="text-decoration: none;">
-                  <i class="fab fa-instagram" style="font-size: 30px; color: #C13584; transition: transform 0.3s, color 0.3s;"></i>
+                <a
+                    href="https://www.instagram.com/_h_a_a_r_i_s_h_145?igsh=OHVuMjJxenloaW1o"
+                    target="_blank"
+                    title="Instagram"
+                    rel="noopener noreferrer"
+                    style="text-decoration: none"
+                    tabindex="0"
+                >
+                    <i
+                        class="fab fa-instagram"
+                        style="font-size: 30px; color: #c13584; transition: transform 0.3s, color 0.3s"
+                    ></i>
                 </a>
-                <a href="https://github.com/Haarish145?tab=repositories" target="_blank" title="GitHub" rel="noopener noreferrer" style="text-decoration: none;">
-                  <i class="fab fa-github" style="font-size: 30px; color: #333; transition: transform 0.3s, color 0.3s;"></i>
+                <a
+                    href="https://github.com/Haarish145?tab=repositories"
+                    target="_blank"
+                    title="GitHub"
+                    rel="noopener noreferrer"
+                    style="text-decoration: none"
+                    tabindex="0"
+                >
+                    <i
+                        class="fab fa-github"
+                        style="font-size: 30px; color: #333; transition: transform 0.3s, color 0.3s"
+                    ></i>
                 </a>
-              </p>
-              
-              <!-- Add hover effects -->
-              <style>
+            </p>
+
+            <!-- Add hover effects -->
+            <style>
                 p a i:hover {
-                  transform: scale(1.2);
-                  color: #FFC107; /* Bright yellow for hover effect */
+                    transform: scale(1.2);
+                    color: #ffc107; /* Bright yellow for hover effect */
                 }
-              </style>
-              
-              <!-- Include Font Awesome -->
-              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-              
+            </style>
+
+            <!-- Include Font Awesome -->
+            <link
+                rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            />
         </div>
     </section>
     <footer>
